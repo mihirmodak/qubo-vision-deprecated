@@ -4,7 +4,7 @@ cp ./yolov5/models/yolov5s.yaml ./yolov5/models/yolov5s_v2.yaml
 sed -i 's/nc: 80  # number of classes/nc: 1  # custom number of classes/g' ./yolov5/models/yolov5s_v2.yaml
 rm ./gates/labels/*.cache
 
-python3 ./yolov5/train.py --img 720 --batch 3 --epochs 200 --data ./qubo_gates.yaml --cfg ./models/yolov5s.yaml --weights''
+python3 ./yolov5/train.py --img 720 --batch 3 --epochs 200 --data ./qubo_gates.yaml --cfg ./yolov5/models/yolov5s_v2.yaml --weights''
 
 tensorboard --logdir runs
 
