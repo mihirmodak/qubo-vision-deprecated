@@ -22,7 +22,6 @@ echo "Modified yolov5 classes"
 
 rm ./gates/labels/*.cache
 
-<<<<<<< HEAD
 echo "Cleared cache files"
 
 echo "Beginning training"
