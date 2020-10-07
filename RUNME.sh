@@ -22,16 +22,18 @@ echo "Modified yolov5 classes"
 
 rm ./gates/labels/*.cache
 
+<<<<<<< HEAD
 echo "Cleared cache files"
 
 echo "Beginning training"
-python3 ./yolov5/train.py --img 720 --batch 1 --epochs 5 --data ./qubo_gates.yaml --cfg ./models/yolov5s.yaml --weights '' 
+python3 ./yolov5/train.py --img 720 --batch 5 --epochs 200 --data ./qubo_gates.yaml --cfg ./models/yolov5s.yaml --weights '' 
 
 echo "Training Complete. To view metrics, run tensorboard --logdir runs"
 
 echo "Exporting path to best.pt wights file"
 
 export WEIGHTS_DIR=${CURR_DIR_CUSTOM}"/runs/"$(cd $CURR_DIR_CUSTOM"/runs" && ls | tail -1)"/weights/best.pt"
+
 
 echo "Running detection algorithm"
 
